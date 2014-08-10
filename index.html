@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+		<title> My Front-end technologies </title>
+
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+
+	</head>
+	<body>
+		<div ng-controller="mainCtrl">
+			<div class="container">
+				<label class="title">
+					<h1>Front-end technologies that work</h1>
+				</label>
+
+				<form ng-submit="addTech()">
+					<input type="text" ng-model="techText" placeholder="Add new Front-End Technology">
+					<input class="btn" type="submit" value="+">
+				</form>
+			</div>
+
+			<ul>
+				<label class="title-1">
+					Language, Generator Static Blog, Template, Frameworks etc ...
+				</label><hr>
+
+				<li ng-repeat="tech in techs">
+					<span class="done">{{tech.text}}</span>
+				</li>
+			</ul>
+		</div>
+
+		<footer class="footer">
+			<div class="div-footer">
+				<p>Made with love by Júnior Lima</p>
+			</div>
+		</footer>
+
+	<script src="app.js"></script>
+	</body>
+</html>
